@@ -45,7 +45,7 @@ function Submit() {
 				if ($('[name=veggie]').val()) {
                     response += $('[name=veggie]').val() + "Vegetarian Option(s) ";
                 }
-				response += " and for dessert we'll have "+
+				response += " and for dessert we'll have ";
 				if ($('[name=stickytoffee]').val()) {
                     response += $('[name=stickytoffee]').val() + "Sticky Toffee Pudding(s)";
                 }
