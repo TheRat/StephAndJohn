@@ -120,7 +120,7 @@ catch {}
 }
 
 function whichForm(numParty,allDay) {
-	if (&& allDay == true {
+	if ( allDay == true) {
 	if (numParty == 1 ) {
 		multiples = false;		
 		return '<div id="rsvpForm">' +
@@ -249,6 +249,7 @@ function whichForm(numParty,allDay) {
 					'</form>' +
 				'</div>';
 	}
+}
 }
 
 function checkCodeAndGetInvite() {
