@@ -137,8 +137,7 @@ function checkCodeAndGetInvite() {
 						'John Harte<br />' +
 						'together with their families<br />' +
 						'invite you to share and celebrate at their wedding</p>' +
-						'<p>Saturday, the twentyth of October<br />' +
-						'Two thousand and eighteen<br />' +
+						'<p>Saturday, the 20th of October 2018<br />' +
 						'at two o\'clock in the afternoon</p>' +
 						'<p>Sherbrooke Castle<br />' +
 						'11 Sherbrooke Ave<br />' +
@@ -220,7 +219,7 @@ function postContactToGoogle() {
 			}
 			if ($('[name=shuttle]').val()) {
 				response += "I " + $('[name=shuttle]').val() +
-				" a seat on the shuttle from the King\'s Port Inn.";
+				" a seat on the shuttle to/from the Ayr/Kilmarnock.";
 			}
 		}
 
