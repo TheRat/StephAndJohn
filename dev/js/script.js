@@ -120,7 +120,7 @@ catch {}
 }
 
 function whichForm(numParty,allDay) {
-	if ( allDay == true) {
+	if ( allDay == "TRUE") {
 	if (numParty == 1 ) {
 		multiples = false;		
 		return '<div id="rsvpForm">' +
