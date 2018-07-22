@@ -99,7 +99,7 @@ catch {}
 			name + '</p>' +
 			'<p><b>You can review your response at any time by coming back and inputting your code.</b></p>' +
 			'<p><i>Contact john@stephandjohn.co.uk if you need to make a change.</i></p>'
-		);}, 5000);
+		);}, 3000);
 			   
 			}
 		 
