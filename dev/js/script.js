@@ -78,11 +78,17 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
 				thankText += '<text y="55" fill="none" stroke="#000033" stroke-width="1" font-size="50">';
 			}
 			thankText += 'Thank You!</text></svg>';
-	
-
-		 
-		$('#rsvp3 .content').html('<div id="rsvp33"> </div>');
-		$('#rsvp3 .content #rsvp33').html(
+			 
+		
+		try {
+		 oFormObject = document.forms['theForm'];
+         oFormObject.elements["code"].value = code;
+         oFormObject.elements["response"].value = response;
+		 document.getElementById('theForm').submit();
+		 }
+catch(err) {
+    $('#rsvp2 .content p:last-child').remove();
+		$('#rsvp2 .content #rsvpForm').html(
 			thankText +
 			'<p><b>Your response:</b></p>' +
 			'<p>Dear John and Steph,</p>' +
@@ -92,10 +98,7 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
 			'<p><b>You can review your response at any time by coming back and inputting your code.</b></p>' +
 			'<p><i>Contact john@stephandjohn.co.uk if you need to make a change.</i></p>'
 		);
-		 oFormObject = document.forms['theForm'];
-         oFormObject.elements["code"].value = code;
-         oFormObject.elements["response"].value = response;
-		 document.getElementById('theForm').submit();
+			}
 	} else {
 		alert("Please fill out all required fields");
 		$('#rsvpForm input, #rsvpForm select').css("box-shadow", "initial");
