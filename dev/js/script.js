@@ -231,7 +231,7 @@ function whichForm(numParty,allDay) {
 					'Sincerely,<br />' + name + '<br />' +				
                                         '<input type="hidden" name="code" value="">' +
                                         '<input type="hidden" name="response" value="">' +
-					'<input type="button" value="Submit" class="submit"  onclick="postContactToGoogle();"/>' +
+					'<input type="button" value="Submit" class="submit"  onclick="Submit();"/>' +
 					'</form>' +
 				'</div>';
 	} 
