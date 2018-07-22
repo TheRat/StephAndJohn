@@ -81,8 +81,8 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
 	
 
 		 
-
-		$('#rsvp2 .content #rsvpForm').html(
+		
+		$('#rsvp3 .content #rsvpForm').html(
 			thankText +
 			'<p><b>Your response:</b></p>' +
 			'<p>Dear John and Steph,</p>' +
