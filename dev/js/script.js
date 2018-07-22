@@ -35,6 +35,26 @@ function Submit() {
                 }
                 response += $('[name=attendance]').val() + " the celebration. " +
                     "There is/are " + $('[name=number]').val() + " attendee(s) in our party. ";
+				response += "For main we'd like "+
+				if ($('[name=beef]').val()) {
+                    response += $('[name=beef]').val() + "Steak Pie(s) ";
+                }
+				if ($('[name=chicken]').val()) {
+                    response += $('[name=chicken]').val() + "Chicken Balmoral(s) ";
+                }
+				if ($('[name=veggie]').val()) {
+                    response += $('[name=veggie]').val() + "Vegetarian Option(s) ";
+                }
+				response += " and for dessert we'll have "+
+				if ($('[name=stickytoffee]').val()) {
+                    response += $('[name=stickytoffee]').val() + "Sticky Toffee Pudding(s)";
+                }
+				if ($('[name=pavlova]').val()) {
+                    response += $('[name=pavlova]').val() + "Pavlova(s).\n";
+                }
+
+				
+				
                 if ($('[name=numberFood]').val() && $('[name=dietaryRestriction]').val()) {
                     response += $('[name=numberFood]').val() + " of us can\'t eat " +
                         $('[name=dietaryRestriction]').val() + ".\n";
@@ -219,7 +239,7 @@ function whichForm(numParty, allDay) {
                 '<option value="miss">miss</option>' +
                 '</select> the celebration. There is/are ' +
                 '<input type="number" name="number" min="0" max="5" placeholder="# *" required/> attendee(s) in our party. ' +
-				'For main course we would like: <input type="number" name="beef" min="0" max="5" placeholder="# *" /> Steak Pies and <input type="number" name="chicken" min="0" max="5" placeholder="# *" /> Chicken Balmorals<br />' +
+				'For main course we would like: <input type="number" name="beef" min="0" max="5" placeholder="# *" /> Steak Pies, <input type="number" name="chicken" min="0" max="5" placeholder="# *" /> Chicken Balmorals and  <input type="number" name="veggie" min="0" max="5" placeholder="# *" /> Vegetarian<br />' +
 				'For dessert we would like: <input type="number" name="stickytoffee" min="0" max="5" placeholder="# *" /> Sticky Toffee Puddings and <input type="number" name="pavlova" min="0" max="5" placeholder="# *" /> Pavlovas<br />' +
                 '<input type="number" name="numberFood" min="0" max="5" placeholder="#"> of us can\'t eat ' +
                 '<input type="text" name="dietaryRestriction" placeholder="Dietary Restrictions" maxlength="500">.<br />' +
