@@ -22,7 +22,7 @@ function clickOnEnter() {
 }
 
 function Submit(){
-if ($('[name=names]').val() && $('[name=attendance]').val() && 
+if ($('[name=attendance]').val() && 
 		((multiples && $('[name=number]').val()) || !multiples)) {
 		var response = "";
 		if (multiples) {
