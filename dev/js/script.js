@@ -22,7 +22,7 @@ function clickOnEnter() {
 }
 
 function Submit(){
-if ($('[name=attendance]').val() && 
+if ($('[name=attendance]').val() &&
 		((multiples && $('[name=number]').val()) || !multiples)) {
 		var response = "";
 		if (multiples) {
@@ -45,7 +45,7 @@ if ($('[name=attendance]').val() &&
 			}
 			if ($('[name=shuttle]').val()) {
 				response += "I/We " + $('[name=shuttle]').val() +
-				" a seat on the shuttle from the King\'s Port Inn.";
+				" seats on the shuttle to/from Ayr/Kilmarnock.";
 			}
 		} else {
 			if ($('[name=introAdjective]').val()) {
@@ -57,6 +57,19 @@ if ($('[name=attendance]').val() &&
 				response += name + " is going to ";
 			}
 			response += $('[name=attendance]').val() + " the celebration. ";
+			if ($('[name=main]').val() ) {
+				response += "I'll be having " + $('[name=main]').val() + " for main course "
+			} else {
+				response += "I don't seem to have ordered a main "
+			}
+			if ($('[name=dessert]').val() ) {
+				response += "follwed by " + $('[name=dessert]').val() + " for dessert."
+			} else {
+				response += "and it seems I don't want a dessert"
+			}
+				
+			
+			
 			if ($('[name=dietaryRestriction]').val()) {
 				response += "I can\'t eat " + $('[name=dietaryRestriction]').val() + ".\n";
 			}
