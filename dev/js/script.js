@@ -80,12 +80,12 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
 			thankText += 'Thank You!</text></svg>';
 			 
 		
-		try {
+
 		 oFormObject = document.forms['theForm'];
          oFormObject.elements["code"].value = code;
          oFormObject.elements["response"].value = response;
 		 document.getElementById('theForm').submit();
-		 }
+		 
 
 	} else {
 		alert("Please fill out all required fields");
