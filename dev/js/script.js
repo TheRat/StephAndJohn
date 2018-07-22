@@ -30,9 +30,9 @@ if ($('[name=attendance]').val() &&
 				response += "We are " + $('[name=introAdjective]').val() + " to hear about your upcoming nuptials!\n";
 			}
 			if ($('[name=adjective]').val()) {
-				response += $('[name=names]').val() + " is/are " + $('[name=adjective]').val() + " to ";
+				response += name + " is/are " + $('[name=adjective]').val() + " to ";
 			} else {
-				response += $('[name=names]').val() + " is/are going to ";
+				response += name + " is/are going to ";
 			}
 			response += $('[name=attendance]').val() + " the celebration. " +
 				"There is/are " + $('[name=number]').val() + " attendee(s) in our party. ";
@@ -52,9 +52,9 @@ if ($('[name=attendance]').val() &&
 				response += "I am " + $('[name=introAdjective]').val() + " to hear about your upcoming nuptials!\n";
 			}
 			if ($('[name=adjective]').val()) {
-				response += $('[name=names]').val() + " is " + $('[name=adjective]').val() + " to ";
+				response += name + " is " + $('[name=adjective]').val() + " to ";
 			} else {
-				response += $('[name=names]').val() + " is going to ";
+				response += name + " is going to ";
 			}
 			response += $('[name=attendance]').val() + " the celebration. ";
 			if ($('[name=dietaryRestriction]').val()) {
@@ -107,7 +107,7 @@ catch {}
 	} else {
 		alert("Please fill out all required fields");
 		$('#rsvpForm input, #rsvpForm select').css("box-shadow", "initial");
-		if (!$('[name=names]').val()) {
+		if (!name) {
 			$('[name=names]').css("box-shadow", "0 0 3px 1px #CC0000");
 		}
 		if (!$('[name=attendance]').val()) {
@@ -333,7 +333,7 @@ function checkCodeAndGetInvite() {
 }
 
 function postContactToGoogle() {
-	if ($('[name=names]').val() && $('[name=attendance]').val() && 
+	if (name && $('[name=attendance]').val() && 
 		((multiples && $('[name=number]').val()) || !multiples)) {
 		var response = "";
 		if (multiples) {
@@ -341,9 +341,9 @@ function postContactToGoogle() {
 				response += "We are " + $('[name=introAdjective]').val() + " to hear about your upcoming nuptials!\n";
 			}
 			if ($('[name=adjective]').val()) {
-				response += $('[name=names]').val() + " is/are " + $('[name=adjective]').val() + " to ";
+				response += name + " is/are " + $('[name=adjective]').val() + " to ";
 			} else {
-				response += $('[name=names]').val() + " is/are going to ";
+				response += name + " is/are going to ";
 			}
 			response += $('[name=attendance]').val() + " the celebration. " +
 				"There is/are " + $('[name=number]').val() + " attendee(s) in our party. ";
@@ -363,9 +363,9 @@ function postContactToGoogle() {
 				response += "I am " + $('[name=introAdjective]').val() + " to hear about your upcoming nuptials!\n";
 			}
 			if ($('[name=adjective]').val()) {
-				response += $('[name=names]').val() + " is " + $('[name=adjective]').val() + " to ";
+				response += name + " is " + $('[name=adjective]').val() + " to ";
 			} else {
-				response += $('[name=names]').val() + " is going to ";
+				response += name + " is going to ";
 			}
 			response += $('[name=attendance]').val() + " the celebration. ";
 			if ($('[name=dietaryRestriction]').val()) {
@@ -409,7 +409,7 @@ function postContactToGoogle() {
 	} else {
 		alert("Please fill out all required fields");
 		$('#rsvpForm input, #rsvpForm select').css("box-shadow", "initial");
-		if (!$('[name=names]').val()) {
+		if (!name) {
 			$('[name=names]').css("box-shadow", "0 0 3px 1px #CC0000");
 		}
 		if (!$('[name=attendance]').val()) {
