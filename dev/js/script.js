@@ -37,20 +37,20 @@ function Submit() {
                     "There is/are " + $('[name=number]').val() + " attendee(s) in our party. ";
 				response += "For main we'd like ";
 				if ($('[name=beef]').val()) {
-                    response += $('[name=beef]').val() + "Steak Pie(s) ";
+                    response += $('[name=beef]').val() + " Steak Pie(s) ";
                 }
 				if ($('[name=chicken]').val()) {
-                    response += $('[name=chicken]').val() + "Chicken Balmoral(s) ";
+                    response += $('[name=chicken]').val() + " Chicken Balmoral(s) ";
                 }
 				if ($('[name=veggie]').val()) {
-                    response += $('[name=veggie]').val() + "Vegetarian Option(s) ";
+                    response += $('[name=veggie]').val() + " Vegetarian Option(s) ";
                 }
 				response += " and for dessert we'll have ";
 				if ($('[name=stickytoffee]').val()) {
-                    response += $('[name=stickytoffee]').val() + "Sticky Toffee Pudding(s)";
+                    response += $('[name=stickytoffee]').val() + " Sticky Toffee Pudding(s)";
                 }
 				if ($('[name=pavlova]').val()) {
-                    response += $('[name=pavlova]').val() + "Pavlova(s).\n";
+                    response += $('[name=pavlova]').val() + " Pavlova(s).\n";
                 }
 
 				
