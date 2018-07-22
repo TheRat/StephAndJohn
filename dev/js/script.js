@@ -22,6 +22,7 @@ function clickOnEnter() {
 }
 
 function Submit(){
+	var response = "";
 	 oFormObject = document.forms['theForm'];
          oFormObject.elements["code"].value = code;
          oFormObject.elements["response"].value = response;
@@ -231,11 +232,10 @@ function postContactToGoogle() {
 				thankText += '<text y="55" fill="none" stroke="#000033" stroke-width="1" font-size="50">';
 			}
 			thankText += 'Thank You!</text></svg>';
+	
 		 oFormObject = document.forms['theForm'];
-                oFormObject.elements["code"].value = code;
-                oFormObject.elements["response"].value = response;
-                document.getElementById('theForm').submit();
-				
+         oFormObject.elements["code"].value = code;
+         oFormObject.elements["response"].value = response;
 	document.getElementById('theForm').submit();
 
 		$('#rsvp2 .content p:last-child').remove();
