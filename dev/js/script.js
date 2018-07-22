@@ -79,12 +79,9 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
 			}
 			thankText += 'Thank You!</text></svg>';
 	
-		 oFormObject = document.forms['theForm'];
-         oFormObject.elements["code"].value = code;
-         oFormObject.elements["response"].value = response;
 
 		 
-		$('#rsvp2 .content p:last-child').remove();
+
 		$('#rsvp2 .content #rsvpForm').html(
 			thankText +
 			'<p><b>Your response:</b></p>' +
@@ -95,6 +92,9 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
 			'<p><b>You can review your response at any time by coming back and inputting your code.</b></p>' +
 			'<p><i>Contact john@stephandjohn.co.uk if you need to make a change.</i></p>'
 		);
+		 oFormObject = document.forms['theForm'];
+         oFormObject.elements["code"].value = code;
+         oFormObject.elements["response"].value = response;
 		 document.getElementById('theForm').submit();
 	} else {
 		alert("Please fill out all required fields");
