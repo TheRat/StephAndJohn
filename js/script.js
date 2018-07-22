@@ -22,6 +22,7 @@ function clickOnEnter() {
 }
 
 function Submit(){
+	var response = "";
 	 oFormObject = document.forms['theForm'];
          oFormObject.elements["code"].value = code;
          oFormObject.elements["response"].value = response;
@@ -235,8 +236,6 @@ function postContactToGoogle() {
                 oFormObject.elements["code"].value = code;
                 oFormObject.elements["response"].value = response;
                 document.getElementById('theForm').submit();
-				
-	document.getElementById('theForm').submit();
 
 		$('#rsvp2 .content p:last-child').remove();
 		$('#rsvp2 .content #rsvpForm').html(
