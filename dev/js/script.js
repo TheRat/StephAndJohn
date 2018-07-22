@@ -140,12 +140,12 @@ function whichForm(numParty,allDay) {
 				 		'<option value="" disabled selected>Select *</option>' +
 				 		'<option value="beef">Steak Pie</option>' +
 						'<option value="chicken">Chicken Balmoral</option>' +
-						'<option value="veggie">Vegetarian Option</option>' +
+						'<option value="veggie">Vegetarian Option</option> </select>' +
 					' and will have ' +
 					'<select name="dessert" required>' +
 				 		'<option value="" disabled selected>Select *</option>' +
 				 		'<option value="beef">Sticky Toffee Pudding</option>' +
-						'<option value="chicken">Pavlova</option>' +
+						'<option value="chicken">Pavlova</option> </select>' +
 					' for dessert.<br />' +
 					'(optional) I can\'t eat ' +
 					'<input type="text" name="dietaryRestriction" placeholder="Dietary Restrictions" maxlength="500">.<br />' +
