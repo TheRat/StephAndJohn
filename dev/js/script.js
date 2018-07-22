@@ -9,7 +9,7 @@ var edge = (navigator.userAgent.indexOf('Edge') != -1);
 
 var firefox = (navigator.userAgent.indexOf("Firefox") != -1 );
 
-var code, name, multiples;
+var code, name, multiples, dayguest;
 
 function clickOnEnter() {
     $('[name=code]').keypress(function(e) {
@@ -25,10 +25,9 @@ function Submit(){
 if ($('[name=attendance]').val() &&
 		((multiples && $('[name=number]').val()) || !multiples)) {
 		var response = "";
+		if (dayguest) {
 		if (multiples) {
-			if ($('[name=introAdjective]').val()) {
-				response += "We are " + $('[name=introAdjective]').val() + " to hear about your upcoming nuptials!\n";
-			}
+			
 			if ($('[name=adjective]').val()) {
 				response += name + " is/are " + $('[name=adjective]').val() + " to ";
 			} else {
@@ -48,9 +47,7 @@ if ($('[name=attendance]').val() &&
 				" seats on the shuttle to/from Ayr/Kilmarnock.";
 			}
 		} else {
-			if ($('[name=introAdjective]').val()) {
-				response += "I am " + $('[name=introAdjective]').val() + " to hear about your upcoming nuptials!\n";
-			}
+			
 			if ($('[name=adjective]').val()) {
 				response += name + " is " + $('[name=adjective]').val() + " to ";
 			} else {
@@ -63,9 +60,9 @@ if ($('[name=attendance]').val() &&
 				response += "I don't seem to have ordered a main "
 			}
 			if ($('[name=dessert]').val() ) {
-				response += "follwed by " + $('[name=dessert]').val() + " for dessert."
+				response += "followed by " + $('[name=dessert]').val() + " for dessert. "
 			} else {
-				response += "and it seems I don't want a dessert"
+				response += "and it seems I don't want a dessert. "
 			}
 				
 			
@@ -80,6 +77,41 @@ if ($('[name=attendance]').val() &&
 				response += "I " + $('[name=shuttle]').val() +
 				" a seat on the shuttle to/from Ayr/Kilmarnock.";
 			}
+		}
+		} else {
+			if (multiples) {
+			
+			if ($('[name=adjective]').val()) {
+				response += name + " is/are " + $('[name=adjective]').val() + " to ";
+			} else {
+				response += name + " is/are going to ";
+			}
+			response += $('[name=attendance]').val() + " the celebration. " +
+				"There is/are " + $('[name=number]').val() + " attendee(s) in our party. ";
+			if ($('[name=songRequest]').val()) {
+				response += "Dancing will only happen if " + $('[name=songRequest]').val() + " is heard. ";
+			}
+			if ($('[name=shuttle]').val()) {
+				response += "I/We " + $('[name=shuttle]').val() +
+				" seats on the shuttle to/from Ayr/Kilmarnock.";
+			}
+		} else {
+			
+			if ($('[name=adjective]').val()) {
+				response += name + " is " + $('[name=adjective]').val() + " to ";
+			} else {
+				response += name + " is going to ";
+			}
+			response += $('[name=attendance]').val() + " the celebration. ";
+
+			if ($('[name=songRequest]').val()) {
+				response += "I will only dance if I hear " + $('[name=songRequest]').val() + ". ";
+			}
+			if ($('[name=shuttle]').val()) {
+				response += "I " + $('[name=shuttle]').val() +
+				" a seat on the shuttle to/from Ayr/Kilmarnock.";
+			}
+		}
 		}
 
 		var thankText = "";
@@ -134,6 +166,7 @@ catch {}
 
 function whichForm(numParty,allDay) {
 	if ( allDay == "TRUE") {
+		dayguest = true;
 	if (numParty == 1 ) {
 		multiples = false;		
 		return '<div id="rsvpForm">' +
@@ -203,6 +236,7 @@ function whichForm(numParty,allDay) {
 				'</div>';
 	} 
 	} else {
+		dayguest = false;
 			if (numParty == 1 ) {
 		multiples = false;		
 		return '<div id="rsvpForm">' +
@@ -253,7 +287,7 @@ function whichForm(numParty,allDay) {
 					'Sincerely,<br />' + name + '<br />' +				
                                         '<input type="hidden" name="code" value="">' +
                                         '<input type="hidden" name="response" value="">' +
-					'<input type="button" value="Submit" class="submit"  onclick="postContactToGoogle();"/>' +
+					'<input type="button" value="Submit" class="submit"  onclick="Submit();"/>' +
 					'</form>' +
 				'</div>';
 	}
@@ -343,93 +377,4 @@ function checkCodeAndGetInvite() {
 		    }
 		});
 	});
-}
-
-function postContactToGoogle() {
-	if (name && $('[name=attendance]').val() && 
-		((multiples && $('[name=number]').val()) || !multiples)) {
-		var response = "";
-		if (multiples) {
-			if ($('[name=introAdjective]').val()) {
-				response += "We are " + $('[name=introAdjective]').val() + " to hear about your upcoming nuptials!\n";
-			}
-			if ($('[name=adjective]').val()) {
-				response += name + " is/are " + $('[name=adjective]').val() + " to ";
-			} else {
-				response += name + " is/are going to ";
-			}
-			response += $('[name=attendance]').val() + " the celebration. " +
-				"There is/are " + $('[name=number]').val() + " attendee(s) in our party. ";
-			if ($('[name=numberFood]').val() && $('[name=dietaryRestriction]').val()) {
-				response += $('[name=numberFood]').val() + " of us can\'t eat " +
-					$('[name=dietaryRestriction]').val() + ".\n";
-			}
-			if ($('[name=songRequest]').val()) {
-				response += "Dancing will only happen if " + $('[name=songRequest]').val() + " is heard. ";
-			}
-			if ($('[name=shuttle]').val()) {
-				response += "I/We " + $('[name=shuttle]').val() +
-				" a seat on the shuttle from the King\'s Port Inn.";
-			}
-		} else {
-			if ($('[name=introAdjective]').val()) {
-				response += "I am " + $('[name=introAdjective]').val() + " to hear about your upcoming nuptials!\n";
-			}
-			if ($('[name=adjective]').val()) {
-				response += name + " is " + $('[name=adjective]').val() + " to ";
-			} else {
-				response += name + " is going to ";
-			}
-			response += $('[name=attendance]').val() + " the celebration. ";
-			if ($('[name=dietaryRestriction]').val()) {
-				response += "I can\'t eat " + $('[name=dietaryRestriction]').val() + ".\n";
-			}
-			if ($('[name=songRequest]').val()) {
-				response += "I will only dance if I hear " + $('[name=songRequest]').val() + ". ";
-			}
-			if ($('[name=shuttle]').val()) {
-				response += "I " + $('[name=shuttle]').val() +
-				" a seat on the shuttle to/from Ayr/Kilmarnock.";
-			}
-		}
-
-		var thankText = "";
-		
-			thankText += '<svg width="253" height="75">';
-			if (ieOrEdge) {
-				thankText += '<text y="55" fill="#000033" font-size="50">';
-			} else {
-				thankText += '<text y="55" fill="none" stroke="#000033" stroke-width="1" font-size="50">';
-			}
-			thankText += 'Thank You!</text></svg>';
-	
-		 oFormObject = document.forms['theForm'];
-         oFormObject.elements["code"].value = code;
-         oFormObject.elements["response"].value = response;
-	document.getElementById('theForm').submit();
-
-		$('#rsvp2 .content p:last-child').remove();
-		$('#rsvp2 .content #rsvpForm').html(
-			thankText +
-			'<p><b>Your response:</b></p>' +
-			'<p>Dear John and Steph,</p>' +
-			'<p>' + response + '</p>' +
-			'<p>Sincerely,<br />' +
-			name + '</p>' +
-			'<p><b>You can review your response at any time by coming back and inputting your code.</b></p>' +
-			'<p><i>Contact john@stephandjohn.co.uk if you need to make a change.</i></p>'
-		);
-	} else {
-		alert("Please fill out all required fields");
-		$('#rsvpForm input, #rsvpForm select').css("box-shadow", "initial");
-		if (!name) {
-			$('[name=names]').css("box-shadow", "0 0 3px 1px #CC0000");
-		}
-		if (!$('[name=attendance]').val()) {
-			$('[name=attendance]').css("box-shadow", "0 0 3px 1px #CC0000");
-		}
-		if (!$('[name=number]').val()) {
-			$('[name=number]').css("box-shadow", "0 0 3px 1px #CC0000");
-		}
-	}
 }
