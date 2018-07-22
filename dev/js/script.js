@@ -127,9 +127,7 @@ function whichForm(numParty,allDay) {
 					'<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>' +
 					'<form method="post" action="https://docs.google.com/macros/exec?service=AKfycbz_2rbiyARw1rHmRPWywxR_pBopy8238aNBHdz2oCf7AHusLw" name="theForm" id="theForm" target="hidden_iframe" id="GoogleForm">' + 
 					'Dear John and Steph,<br />' +
-					'I am <input type="text" name="introAdjective" placeholder="Adjective"> to hear about your upcoming nuptials!<br />' +
-					'<input type="text" name="names" placeholder="Your Name *" maxlength="500" required/> is ' +
-					'<input type="text" name="adjective" placeholder="Adjective"> to ' +
+					'I am <input type="text" name="adjective" placeholder="Adjective"> to ' +
 					'<select name="attendance" required>' +
 				 		'<option value="" disabled selected>Select *</option>' +
 				 		'<option value="attend">attend</option>' +
@@ -144,18 +142,18 @@ function whichForm(numParty,allDay) {
 					' and will have ' +
 					'<select name="dessert" required>' +
 				 		'<option value="" disabled selected>Select *</option>' +
-				 		'<option value="beef">Sticky Toffee Pudding</option>' +
-						'<option value="chicken">Pavlova</option> </select>' +
+				 		'<option value="stickytoffee">Sticky Toffee Pudding</option>' +
+						'<option value="pavlova">Pavlova</option> </select>' +
 					' for dessert.<br />' +
 					'(optional) I can\'t eat ' +
 					'<input type="text" name="dietaryRestriction" placeholder="Dietary Restrictions" maxlength="500">.<br />' +
 					'I will only dance if I hear ' +
-					'<input type="text" name="songRequest" placeholder="Song/Artist" maxlength="500">. I ' +
+					'<input type="text" name="songRequest" placeholder="Song/Artist" maxlength="500">, and I ' +
 					'<select name="shuttle">' +
 						'<option value="" disabled selected>Select</option>' +
 						'<option value="would like">would like</option>' +
 						'<option value="will not need">will not need</option>' +
-					'</select> a seat on the bus home.<br />' +
+					'</select> a seat on the late bus back to Ayr/Kilmarnock.<br />' +
 					'Sincerely,<br />' + name + '<br />' +
 					'<input type="hidden" name="code" value="">' +
 					'<input type="hidden" name="response" value="">' +
@@ -168,9 +166,7 @@ function whichForm(numParty,allDay) {
 					'<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>' +
 					'<form method="post" action="https://docs.google.com/macros/exec?service=AKfycbz_2rbiyARw1rHmRPWywxR_pBopy8238aNBHdz2oCf7AHusLw" name="theForm" id="theForm" target="hidden_iframe" id="GoogleForm">' +
 					'Dear John and Steph,<br />' +
-					'We are <input type="text" name="introAdjective" placeholder="Adjective"> to hear about your upcoming nuptials!<br />' +
-					'<input type="text" name="names" placeholder="Your Names *" maxlength="500" required/> is/are ' +
-					'<input type="text" name="adjective" placeholder="Adjective"> to ' +
+					'We are <input type="text" name="adjective" placeholder="Adjective"> to ' +
 					'<select name="attendance" required>' +
 				 		'<option value="" disabled selected>Select *</option>' +
 				 		'<option value="attend">attend</option>' +
@@ -185,7 +181,7 @@ function whichForm(numParty,allDay) {
 						'<option value="" disabled selected>Select</option>' +
 						'<option value="would like">would like</option>' +
 						'<option value="will not need">will not need</option>' +
-					'</select> a seat on the bus home.<br />' +
+					'</select> a seat on the late bus back to Ayr/Kilmarnock.<br />' +
 					'Sincerely,<br />' + name + '<br />' +				
                                         '<input type="hidden" name="code" value="">' +
                                         '<input type="hidden" name="response" value="">' +
@@ -200,9 +196,7 @@ function whichForm(numParty,allDay) {
 					'<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>' +
 					'<form method="post" action="https://docs.google.com/macros/exec?service=AKfycbz_2rbiyARw1rHmRPWywxR_pBopy8238aNBHdz2oCf7AHusLw" name="theForm" id="theForm" target="hidden_iframe" id="GoogleForm">' + 
 					'Dear John and Steph,<br />' +
-					'I am <input type="text" name="introAdjective" placeholder="Adjective"> to hear about your upcoming nuptials!<br />' +
-					'<input type="text" name="names" placeholder="Your Name *" maxlength="500" required/> is ' +
-					'<input type="text" name="adjective" placeholder="Adjective"> to ' +
+					'I am <input type="text" name="adjective" placeholder="Adjective"> to ' +
 					'<select name="attendance" required>' +
 				 		'<option value="" disabled selected>Select *</option>' +
 				 		'<option value="attend">attend</option>' +
