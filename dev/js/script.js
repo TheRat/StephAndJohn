@@ -87,7 +87,7 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
 		 document.getElementById('theForm').submit();
 		 }
 			finally {
-			    $('#rsvp2 .content p:last-child').remove();
+				setTimeout(function(){ $('#rsvp2 .content p:last-child').remove();
 		$('#rsvp2 .content #rsvpForm').html(
 			thankText +
 			'<p><b>Your response:</b></p>' +
@@ -97,7 +97,8 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
 			name + '</p>' +
 			'<p><b>You can review your response at any time by coming back and inputting your code.</b></p>' +
 			'<p><i>Contact john@stephandjohn.co.uk if you need to make a change.</i></p>'
-		);
+		);}, 1000);
+			   
 			}
 	} else {
 		alert("Please fill out all required fields");
