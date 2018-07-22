@@ -192,6 +192,7 @@ function whichForm(numParty,allDay) {
 					'<input type="button" value="Submit" class="submit"  onclick="postContactToGoogle();"/>' +
 					'</form>' +
 				'</div>';
+	} 
 	} else {
 			if (numParty == 1 ) {
 		multiples = false;		
