@@ -86,20 +86,7 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
          oFormObject.elements["response"].value = response;
 		 document.getElementById('theForm').submit();
 		 }
-			finally {
-				setTimeout(function(){ $('#rsvp2 .content p:last-child').remove();
-		$('#rsvp2 .content #rsvpForm').html(
-			thankText +
-			'<p><b>Your response:</b></p>' +
-			'<p>Dear John and Steph,</p>' +
-			'<p>' + response + '</p>' +
-			'<p>Sincerely,<br />' +
-			name + '</p>' +
-			'<p><b>You can review your response at any time by coming back and inputting your code.</b></p>' +
-			'<p><i>Contact john@stephandjohn.co.uk if you need to make a change.</i></p>'
-		);}, 1000);
-			   
-			}
+
 	} else {
 		alert("Please fill out all required fields");
 		$('#rsvpForm input, #rsvpForm select').css("box-shadow", "initial");
