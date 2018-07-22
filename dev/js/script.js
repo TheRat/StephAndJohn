@@ -84,7 +84,24 @@ if ($('[name=names]').val() && $('[name=attendance]').val() &&
 		 oFormObject = document.forms['theForm'];
          oFormObject.elements["code"].value = code;
          oFormObject.elements["response"].value = response;
+		 try {
 		 document.getElementById('theForm').submit();
+}
+catch {}
+			finally {
+				setTimeout(function(){ $('#rsvp2 .content p:last-child').remove();
+		$('#rsvp2 .content #rsvpForm').html(
+			thankText +
+			'<p><b>Your response:</b></p>' +
+			'<p>Dear John and Steph,</p>' +
+			'<p>' + response + '</p>' +
+			'<p>Sincerely,<br />' +
+			name + '</p>' +
+			'<p><b>You can review your response at any time by coming back and inputting your code.</b></p>' +
+			'<p><i>Contact john@stephandjohn.co.uk if you need to make a change.</i></p>'
+		);}, 5000);
+			   
+			}
 		 
 
 	} else {
