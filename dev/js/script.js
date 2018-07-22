@@ -35,7 +35,7 @@ function Submit() {
                 }
                 response += $('[name=attendance]').val() + " the celebration. " +
                     "There is/are " + $('[name=number]').val() + " attendee(s) in our party. ";
-				response += "For main we'd like "+
+				response += "For main we'd like ";
 				if ($('[name=beef]').val()) {
                     response += $('[name=beef]').val() + "Steak Pie(s) ";
                 }
