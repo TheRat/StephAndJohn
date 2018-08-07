@@ -90,9 +90,6 @@ function Submit() {
                 if ($('[name=dietaryRestriction]').val()) {
                     response += "I can\'t eat " + $('[name=dietaryRestriction]').val() + ".\n";
                 }
-                if ($('[name=songRequest]').val()) {
-                    response += "I will only dance if I hear " + $('[name=songRequest]').val() + ". ";
-                }
                 if ($('[name=shuttle]').val()) {
                     response += "I " + $('[name=shuttle]').val() +
                         " a seat on the shuttle to/from Ayr/Kilmarnock.";
@@ -124,9 +121,7 @@ function Submit() {
                 }
                 response += $('[name=attendance]').val() + " the celebration. ";
 
-                if ($('[name=songRequest]').val()) {
-                    response += "I will only dance if I hear " + $('[name=songRequest]').val() + ". ";
-                }
+
                 if ($('[name=shuttle]').val()) {
                     response += "I " + $('[name=shuttle]').val() +
                         " a seat on the shuttle to/from Ayr/Kilmarnock.";
@@ -213,8 +208,7 @@ function whichForm(numParty, allDay) {
                 ' for dessert.<br />' +
                 '(optional) I can\'t eat ' +
                 '<input type="text" name="dietaryRestriction" placeholder="Dietary Restrictions" maxlength="500">.<br />' +
-                'I will only dance if I hear ' +
-                '<input type="text" name="songRequest" placeholder="Song/Artist" maxlength="500">, and I ' +
+                'I ' +
                 '<select name="shuttle">' +
                 '<option value="" disabled selected>Select</option>' +
                 '<option value="would like">would like</option>' +
@@ -271,8 +265,7 @@ function whichForm(numParty, allDay) {
                 '<option value="attend">attend</option>' +
                 '<option value="miss">miss</option>' +
                 '</select> the celebration.<br />' +
-                'I will only dance if I hear ' +
-                '<input type="text" name="songRequest" placeholder="Song/Artist" maxlength="500">. I ' +
+                'I ' +
                 '<select name="shuttle">' +
                 '<option value="" disabled selected>Select</option>' +
                 '<option value="would like">would like</option>' +
