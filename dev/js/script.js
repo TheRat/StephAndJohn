@@ -237,8 +237,7 @@ function whichForm(numParty, allDay) {
 				'For dessert we would like: <input type="number" name="stickytoffee" min="0" max="5" placeholder="# *" /> Sticky Toffee Puddings and <input type="number" name="pavlova" min="0" max="5" placeholder="# *" /> Pavlovas<br />' +
                 '<input type="number" name="numberFood" min="0" max="5" placeholder="#"> of us can\'t eat ' +
                 '<input type="text" name="dietaryRestriction" placeholder="Dietary Restrictions" maxlength="500">.<br />' +
-                'Dancing will only happen if ' +
-                '<input type="text" name="songRequest" placeholder="Song/Artist" maxlength="500"> is heard. I/We ' +
+                'I/We ' +
                 '<select name="shuttle">' +
                 '<option value="" disabled selected>Select</option>' +
                 '<option value="would like">would like</option>' +
@@ -292,8 +291,7 @@ function whichForm(numParty, allDay) {
                 '<option value="miss">miss</option>' +
                 '</select> the celebration. There is/are ' +
                 '<input type="number" name="number" min="0" max="5" placeholder="# *" required/> attendee(s) in our party.<br />' +
-                'Dancing will only happen if ' +
-                '<input type="text" name="songRequest" placeholder="Song/Artist" maxlength="500"> is heard. I/We ' +
+                'I/We ' +
                 '<select name="shuttle">' +
                 '<option value="" disabled selected>Select</option>' +
                 '<option value="would like">would like</option>' +
