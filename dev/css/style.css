@@ -99,7 +99,7 @@ section {
 	background: linear-gradient(135deg,  rgba(214,81,110,0.2) 0%,rgba(214,81,110,0.2) 1%,rgba(82,178,189,0.2) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33d6516e', endColorstr='#3352b2bd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	display: block;
-	height: 70%;
+	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
@@ -169,7 +169,7 @@ section {
 }
 
 .navbar-brand {
-	padding: 20px 15px;
+	/*padding: 20px 15px;*/
 	font-size: auto;
 	line-height: auto;
 }
@@ -183,7 +183,7 @@ section {
 }
 
 .dropdown-menu > li > a {
-	padding: 7px 20px;
+	/*padding: 7px 20px;*/
 	text-transform: none;
 }
 
