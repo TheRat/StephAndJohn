@@ -15,7 +15,7 @@
 var CountdownImageFolder = "images/";
 var CountdownImageBasename = "flipper";
 var CountdownImageExt = "png";
-var CountdownImagePhysicalWidth = 41;
+var CountdownImagePhysicalWidth = 50;
 var CountdownImagePhysicalHeight = 60;
 
 var CountdownWidth = 200;
@@ -25,7 +25,7 @@ var CountdownLabels = {
 	second 	: "SECONDS",
 	minute 	: "MINUTES",
 	hour	: "HOURS",
-	day 	: "DAYS",
+	day 	: "DAYSS",
 	month 	: "MONTHS",
 	year 	: "YEARS"	
 };
