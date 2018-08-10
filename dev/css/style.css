@@ -169,7 +169,7 @@ section {
 }
 
 .navbar-brand {
-	/*padding: 20px 15px;*/
+	padding: 20px 15px;
 	font-size: auto;
 	line-height: auto;
 }
@@ -183,7 +183,7 @@ section {
 }
 
 .dropdown-menu > li > a {
-	/*padding: 7px 20px;*/
+	padding: 7px 20px;
 	text-transform: none;
 }
 
