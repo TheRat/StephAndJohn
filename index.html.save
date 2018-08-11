@@ -158,8 +158,8 @@ https://github.com/justgrimes/wedding
 				<div class="row">
 					<div class="col-sm-6" data-scroll-reveal="enter from the left">
 							<a href="" class="johnharte img-circle img-responsive"></a>
-							<img src="images/john.jpg" class="img-responsive img-circle justgrimes" alt="" /> <span class="img-circle">
-							</span>
+							<!--<img src="images/john.jpg" class="img-responsive img-circle justgrimes" alt="" /> <span class="img-circle">
+							</span>-->
 							
 						<h5>John Harte</h5>
 						<p>Professional geek by day and amature fridge-raider by night.</p>
@@ -169,10 +169,10 @@ https://github.com/justgrimes/wedding
 						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
 					</div>
 					<div class="col-sm-6" data-scroll-reveal="enter from the right after 0.5s">
-							<img src="images/steph.jpg" class="img-responsive img-circle" alt="" />
+							<!--<img src="images/steph.jpg" class="img-responsive img-circle" alt="" />
 							<span class="img-circle">
 							</span>
-							
+							-->
 							<a href="" class="stephbrennan img-circle img-responsive"></a>
 							
 						<h5>Stephanie Brennan</h5>
