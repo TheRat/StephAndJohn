@@ -1,6 +1,3 @@
+A cobbled together monstrosity edited together by a non-web developer. Please don't judge me...
 
-CLoned and modified from https://github.com/justgrimes/wedding
-
-
-
-
+Cloned mainly from https://github.com/justgrimes/wedding

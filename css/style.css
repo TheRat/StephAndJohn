@@ -7,6 +7,7 @@
 =========================================================================================*/
 
 body {
+	font-size: 20px;
 	overflow-x: hidden;
 }
 
@@ -18,6 +19,7 @@ h1 {
 	color: #fff;
 	font-family: 'Engagement', cursive;
 	font-weight: normal;
+	font-size: 26px;
 	margin: 0;
 }
 
@@ -25,15 +27,18 @@ h2 {
 	font-family: 'Engagement', cursive;
 	font-weight: normal;
 	margin: 0;
+	font-size: 58px;
 }
 
 h3,h4,h5,h6 {
 	margin: 3em 0;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
+	font-size: 20px;
 }
 
 h6 {
+	font-size: 18px;
 	color: #d6516d;
 }
 
@@ -55,6 +60,7 @@ a:hover {
 
 p {
 	margin: 0 0 1em;
+	font-size: 20px;
 }
 
 hr {
@@ -237,30 +243,30 @@ section {
 	width: 100%;
 }
 
-.justgrimes {
+.johnharte {
  width: 370px;
  height:370px;
  display:block;
 	display: inline-block;
 	position: relative;
- background:transparent url('../images/justin.jpg') center top no-repeat;
+ background:transparent url('../images/john.jpg') center top no-repeat;
 }
 
-.justgrimes:hover {
-   background-image: url('../images/justin2.jpg');
+.johnharte:hover {
+   background-image: url('../images/john2.jpg');
 }
 
-.amgallow {
+.stephbrennan {
  width: 370px;
  height:370px;
  display:block;
 	display: inline-block;
 	position: relative;
- background:transparent url('../images/ann.jpg') center top no-repeat;
+ background:transparent url('../images/steph.jpg') center top no-repeat;
 }
 
-.amgallow:hover {
-   background-image: url('../images/ann2.jpg');
+.stephbrennan:hover {
+   background-image: url('../images/steph2.jpg');
 }
 
 .hover-effect i {

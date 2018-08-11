@@ -25,7 +25,7 @@ var CountdownLabels = {
 	second 	: "SECONDS",
 	minute 	: "MINUTES",
 	hour	: "HOURS",
-	day 	: "DAYS",
+	day 	: "DAYSS",
 	month 	: "MONTHS",
 	year 	: "YEARS"	
 };
