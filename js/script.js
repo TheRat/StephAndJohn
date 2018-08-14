@@ -146,7 +146,8 @@ function Submit() {
         oFormObject.elements["response"].value = response;
         try {
             document.getElementById('theForm').submit();
-        } catch {} finally {
+        }
+        finally {
             setTimeout(function() {
                 $('#rsvp2 .content p:last-child').remove();
                 $('#rsvp2 .content #rsvpForm').html(
