@@ -180,7 +180,7 @@ function Submit() {
     }
 }
 
-function whichForm(numParty, allDay) {
+function whichForm(numParty, allDay, hasKids) {
     if (allDay == "TRUE") {
         dayguest = true;
         if (numParty == 1) {
@@ -223,6 +223,38 @@ function whichForm(numParty, allDay) {
                 '</div>';
         } else {
             multiples = true;
+            if (hasKids == "Yes")
+            {
+            return '<div id="rsvpForm">' +
+                '<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>' +
+                '<form method="post" action="https://docs.google.com/macros/exec?service=AKfycbz_2rbiyARw1rHmRPWywxR_pBopy8238aNBHdz2oCf7AHusLw" name="theForm" id="theForm" target="hidden_iframe" id="GoogleForm">' +
+                'Dear John and Steph,<br />' +
+                'We are <input type="text" name="adjective" placeholder="Adjective"> to ' +
+                '<select name="attendance" required>' +
+                '<option value="" disabled selected>Select *</option>' +
+                '<option value="attend">attend</option>' +
+                '<option value="miss">miss</option>' +
+                '</select> the celebration. There is/are ' +
+                '<input type="number" name="number" min="0" max="5" placeholder="# *" required/> attendee(s) in our party. ' +
+				'For main course we would like: <input type="number" name="beef" min="0" max="5" placeholder="# *" /> Steak Pies, <input type="number" name="chicken" min="0" max="5" placeholder="# *" /> Chicken Balmorals and  <input type="number" name="veggie" min="0" max="5" placeholder="# *" /> Vegetarian<br />' +
+				'For dessert we would like: <input type="number" name="stickytoffee" min="0" max="5" placeholder="# *" /> Sticky Toffee Puddings and <input type="number" name="pavlova" min="0" max="5" placeholder="# *" /> Pavlovas<br />' +
+                '<input type="number" name="numberFood" min="0" max="5" placeholder="#"> of us can\'t eat ' +
+                '<input type="text" name="dietaryRestriction" placeholder="Dietary Restrictions" maxlength="500">.<br />' +
+                'We will also need <input type="number" name="kidsMeals" min="0" max="5" placeholder="#"> kids meals. <br />' +
+                'I/We ' +
+                '<select name="shuttle">' +
+                '<option value="" disabled selected>Select</option>' +
+                '<option value="would like">would like</option>' +
+                '<option value="will not need">will not need</option>' +
+                '</select> a seat on the late bus back to Ayr/Kilmarnock.<br />' +
+                'Sincerely,<br />' + name + '<br />' +
+                '<input type="hidden" name="code" value="">' +
+                '<input type="hidden" name="response" value="">' +
+                '<input type="button" value="Submit" class="submit"  onclick="Submit();"/>' +
+                '</form>' +
+                '</div>';
+            } else {
+            
             return '<div id="rsvpForm">' +
                 '<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>' +
                 '<form method="post" action="https://docs.google.com/macros/exec?service=AKfycbz_2rbiyARw1rHmRPWywxR_pBopy8238aNBHdz2oCf7AHusLw" name="theForm" id="theForm" target="hidden_iframe" id="GoogleForm">' +
@@ -314,7 +346,8 @@ function checkCodeAndGetInvite() {
     var valid = false;
     var rsvpd = false;
     var numInParty = 0;
-    var fullDayGuest = false
+    var fullDayGuest = false;
+    var hasKids = false;
     var guestSheet = 'https://spreadsheets.google.com/feeds/list/1Iyc7BBAluB1CHaR6DLWexZg1FZMgOsSpOu-LyDLQTzM/1/public/values?alt=json';
     $.getJSON(guestSheet).success(function(data) {
         var guests = data.feed.entry;
@@ -324,6 +357,7 @@ function checkCodeAndGetInvite() {
                 name = guests[i].gsx$name.$t;
                 numInParty = guests[i].gsx$numberinparty.$t;
                 fullDayGuest = guests[i].gsx$fulldayguest.$t;
+                hasKids = guests[i].gsx$kids.$t;
                 break;
             }
         }
@@ -366,7 +400,7 @@ function checkCodeAndGetInvite() {
                 '<p><b>Please respond by September 1, 2018</b></p><br />';
             if (valid && !rsvpd) {
                 $('#codeEntry p').remove();
-                $('#rsvp2 .content').html(invite + whichForm(numInParty, fullDayGuest) +
+                $('#rsvp2 .content').html(invite + whichForm(numInParty, fullDayGuest, hasKids) +
                     '<p><i>Fields with a * are required</i></p>'
                 );
             } else if (valid && rsvpd) {
