@@ -1,0 +1,966 @@
+<!--
+Oh, you didn't view the code did you? Why on earth would you do that!? 
+
+In my defense I'm by no means a web developer, the odd powershell script 
+hastily thrown together to do something in a way it was never designed to
+do is usually my comfort zone!
+
+If you really want to go poking around, please feel free - just don't laugh at
+me too much for this cobbled together steaming piece of.. er.. code.
+
+Alternatively, the glory of the whole thing can be found here:
+https://github.com/TheRat/StephAndJohn
+
+Which is actually a complete bastardisation of the example found here:
+https://github.com/justgrimes/wedding
+
+--John
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="marriage">
+		<meta name="author" content="John Harte">
+		<title>Harte &amp; Brennan Wedding</title>
+		<link rel="shortcut icon" href="images/favicon.png">
+                <meta name="robots" content="noindex">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        	<script type="text/javascript" src="js/script.js"></script>
+
+		<!-- Pace Loader -->
+		<script src="js/pace.min.js"></script>
+  		<link href="css/pace.css" rel="stylesheet" />
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- Superslides CSS -->
+		<link href="css/superslides.css" rel="stylesheet">
+
+		<!-- Countdown CSS -->
+		<link href="css/countdown.css" rel="stylesheet">
+
+		<!-- Owl Carousel stylesheet -->
+		<link href="css/owl.carousel.css" rel="stylesheet">
+
+		<!-- Owl Carousel Default Theme -->
+		<link href="css/owl.theme.css" rel="stylesheet">
+
+		<!-- Fancybox -->
+		<link href="css/jquery.fancybox.css" rel="stylesheet">
+
+		<!-- Google Fonts -->
+		<link href="http://fonts.googleapis.com/css?family=PT+Serif%7CEngagement%7COpen+Sans:800" rel="stylesheet">
+
+		<!-- Font Awesome Icons -->
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Pretty Box -->
+		<link href="css/prettyPhoto.css" rel="stylesheet">
+            
+                <!-- Leaf Font -->
+                <link href="css/ji_nature_batsregular.css" rel="stylesheet">
+		
+                <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+
+	</head>
+	<body >
+
+		<a id="home"></a>
+
+		<!-- ========== BANNER START ========== -->
+
+		<div id="slides">
+			<div class="slides-container">
+				<img src="images/001.jpg" alt="" />
+				<img src="images/002.jpg" alt="" />
+				<img src="images/003.jpg" alt="" />				
+				<img src="images/013.jpg" alt="" />
+				<img src="images/004.jpg" alt="" />
+				<img src="images/005.jpg" alt="" />
+				<img src="images/006.jpg" alt="" />
+				<img src="images/007.jpg" alt="" />
+				<img src="images/008.jpg" alt="" />
+				<img src="images/009.jpg" alt="" />
+				<img src="images/010.jpg" alt="" />
+				<img src="images/011.jpg" alt="" />
+				<!--<img src="images/012.jpg" alt="" />-->
+				<img src="images/014.jpg" alt="" />
+				<img src="images/015.jpg" alt="" />
+				<img src="images/016.jpg" alt="" />
+				<img src="images/017.jpg" alt="" />
+				<img src="images/018.jpg" alt="" />
+				<img src="images/019.jpg" alt="" />
+				<img src="images/020.jpg" alt="" />
+			</div>
+			<div class="tint">
+				<div class="welcome text-center" data-scroll-reveal="enter from the top after 2s">
+					<h1>John &amp; Steph</h1>
+					<p>are getting married</p>
+					<p><span></span><img src="images/favicon.png" /></i><span></span></p>
+					<p>Saturday 20th October 2018</p>
+				</div>
+			</div>
+			<div class="countdown" data-scroll-reveal="enter from the bottom after 2.5s"></div>
+		</div>
+
+		<!-- ========== BANNER END ========== -->
+
+		<!-- ========== MENU START ========== -->
+
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">#HarteWedding<!--<img src="images/logo.png" alt="" class="img-responsive" />--></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#explain">Intro</a></li>
+						<li><a href="#thewedding">The Wedding</a></li>
+						<li><a href="#gettingthere">Getting There</a></li>
+						<li><a href="#accommodation">Accommodation</a></li>
+						<li><a href="#rsvp2">RSVP</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- ========== MENU END ========== -->
+
+		<!-- ========== ABOUT US START ========== -->
+
+		<section id="about">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>About Us</h2>
+						<p><span></span><img src="images/favicon.png" /></i><span></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6" data-scroll-reveal="enter from the left">
+							<a href="" class="johnharte img-circle img-responsive"></a>
+							<!--<img src="images/john.jpg" class="img-responsive img-circle justgrimes" alt="" /> <span class="img-circle">
+							</span>-->
+							
+						<h5>John Harte</h5>
+						<p>Professional geek by day and amature fridge-raider by night.</p>
+						<ul class="social-icons">
+							<li><a href="https://www.facebook.com/harte.john" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						</ul>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+					<div class="col-sm-6" data-scroll-reveal="enter from the right after 0.5s">
+							<!--<img src="images/steph.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+							</span>
+							-->
+							<a href="" class="stephbrennan img-circle img-responsive"></a>
+							
+						<h5>Stephanie Brennan</h5>
+						<p>Organised is her middle name!</p>
+						<ul class="social-icons">
+							<li><a href="https://www.facebook.com/stephanie.brennan.104" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== ABOUT US END ========== -->
+
+		<!-- ========== EXPLAIN START ========== -->
+
+		<section id="explain" style="background: #f5f4ec;">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>Allow us to reintroduce ourselves</h2>
+						<p><span></span><img src="images/favicon.png" /></i><span></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div>
+						<p>You'll probably know one or both of us, but this might be a good opportunity for us to fill you in a little on how we got here. I'm sure our story will come up a few times on the 20th of October, but here's some bullet points to get you up to speed.</p>
+						<p>Our first date was at 'The Stand' in Glasgow in 2011 where we took in a bit of comedy. As with any good love story we decided to remain friends at first, and continued to text each other and meet up every so often over the next 5 years.</p>
+						<p>On Valentines day in 2016 we both realised that there might be something more to be had with our platonic relationship, and decided to start seeing if there could be something there.</p>
+						<p>Just 7 short months later things seemed to be working out, so much so that we were engaged on the 28th of September 2016 in the city of Florence, Italy.</p>
+						<p>At the start of this year we moved in together and have been busy making our new house a home. We're both excited to be continuing our adventure together with our marriage in October</p>
+
+						<!--<p>Our Wedding Hashtag: #HarteWedding</p>-->
+
+						<div class="mobile-divider x"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== EXPLAIN END ========== -->
+
+		<!-- ========== PEOPLE START ========== -->
+		<!--
+		<section id="people">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 heading text-center" data-scroll-reveal>
+						<h2>Most Important People</h2>
+						<p><span></span><img src="images/favicon.png" /></i><span></span></p>
+					</div>
+				</div>
+				<div class="row row-margin">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Joseph Connor</h5>
+						<h6>Best man</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="person1.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="person2.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Natalie Jones</h5>
+						<h6>Bridemaid</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+				</div>
+				<div class="row row-margin">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>John Connor</h5>
+						<h6>Groom's Father</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="person1.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="person2.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>William Jones</h5>
+						<h6>Bride's Father</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Jane Connor</h5>
+						<h6>Groom's Mother</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="person1.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="person2.html" class="hover-effect">
+							<img src="http://placehold.it/270x270.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="fa fa-link fa-3x"></i>
+							</span>
+						</a>
+					</div>
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Beth Jones</h5>
+						<h6>Bride's Mother</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra nunc, non scelerisque ligula. Cras vel justo nulla. Vestibulum a sollicitudin metus, faucibus fermentum leo.</p>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		-->
+
+		<!-- ========== PEOPLE END ========== -->
+
+		<!-- ========== EVENTS START ========== -->
+
+		<section id="thewedding">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>The Wedding</h2>
+						<p><span></span><img src="images/favicon.png" /></i><span></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div>
+						<p>John Harte and Stephanie Brennan will be married on Saturday 20th of October 2018 in Sherbrooke Castle Hotel in Glasgow</p>
+						<p>'All timings below are estimates' - The Groom</p>
+						<p>'We're sticking to the schedule' - The Bride</p>
+						<!--<p>Although times are given below you should bear in mind that: 'No Battle Plan Survives Contact With the Enemy' - Helmuth von Moltke. 1800-1891</p>-->
+						<!--<p>Drinks will be served from 1pm, with the ceremony itself starting at 2pm promptly.<p>
+						<p>After photos, speeches and dinner, evening guests are welcome to join from 7pm onwards.<p>-->
+						<div class="mobile-divider x"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="blog-short">
+							<img src="images/castle.jpg" class="img-responsive" alt="" />
+							<h5>Welcome Drinks"</h5>
+							<h6>1pm-2pm</h6>
+							<p>Guests are welcome to arrive from 1pm, and will be greeted with a glass of Prosecco to begin the celebrating!</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="blog-short">
+							<img src="images/ceremony.jpg" class="img-responsive" alt="" />
+							<h5>Wedding Ceremony</h5>
+							<h6>2pm-3pm</h6>
+							<p>We're getting married in the castle itself by our celebrant - <a href="https://fuzeceremonies.co.uk/blog/portfolio-items/john-leo-scott/">John Leo Scott</a></p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="blog-short">
+							<img src="images/Reception.jpg" class="img-responsive" alt="" />
+							<h5>Wedding Reception</h5>
+							<h6>3pm-6pm</h6>
+							<p>Following the ceremony there'll be a brief break for photos and canapés, after which there'll be a few short speaches and finally the reception itself.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="blog-short">
+							<img src="images/EveningReception.jpg" class="img-responsive" alt="" />
+							<h5>Evening Reception</h5>
+							<h6>7pm-1am</h6>
+							<p>Evening guests are welcome to join from 7pm, where the dancing shall be legendary.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="blog-short">
+							<img src="images/TheKicks.jpg" class="img-responsive" alt="" />
+							<h5>Wedding Band</h5>
+							<h6>8pm-Midnight</h6>
+							<p>We've managed to secure 'The Kicks' who will be playing their hearts out and taking requests if there are any old favourites you'd like to hear.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="blog-short">
+							<img src="images/WeddingCoach.jpg" class="img-responsive" alt="" />
+							<h5>Coach leaves for Kilmarnock and Ayr</h5>
+							<h6>1am</h6>
+							<p>If there's enough interest we'll organise a coach to pickup the evening guests from Ayr/Kilmarnock, and this will make the return trip around 1am. Watch this space for more details!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== EVENTS END ========== -->
+		
+		
+		<!-- ========== GETTING THERE START ========== -->
+		
+		<section id="gettingthere" style="background: #f5f4ec;">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>Getting There</h2>
+						<p><span></span><img src="images/favicon.png" /></i><span></span></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+					<div class="row">
+					<div>
+						<div class="mobile-divider x"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+					</div>
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Car</h5>
+						<p>There is plenty of car parking available at the venue should you wish to drive</p>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="http://www.sherbrookecastlehotel.com/" class="hover-effect">
+							<img src="images/car.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="http://www.marriott.com/hotels/travel/wasnw-courtyard-washington-dc-dupont-circle/"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="https://www.scotrail.co.uk" class="hover-effect">
+							<img src="images/train.jpg" class="img-responsive img-circle" alt=""/>
+							<span class="img-circle">
+								<i class="http://www.marriott.com/hotels/travel/wasnw-courtyard-washington-dc-dupont-circle/"></i>
+							</span>
+						</a>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Train</h5>
+						<p>The nearest stop is 'Dumbreck' - one stop from Glasgow Central on the 'Paisley Canal' line.</p>
+						<p>Trains are every 30 minutes, with the final train to Glasgow leaving at 11:18pm</p>
+						
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+					<div class="row">
+					<div>
+						<div class="mobile-divider x"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+					</div>
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Taxi</h5>
+						<p>From the central of Glasgow a 'Black Hack' will cost you about £10 to/from the venue.</p>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="http://www.glasgowtaxis.co.uk/" class="hover-effect">
+							<img src="images/taxi.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="http://www.glasgowtaxis.co.uk/"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="https://www.airbnb.com/s/Columbia-Heights--D%252EC%252E--DC--United-States?checkin=06%2F06%2F2014&checkout=06%2F08%2F2014" class="hover-effect">
+							<img src="images/WeddingCoach_small.jpg" class="img-responsive img-circle" alt=""/>
+							<span class="img-circle">
+								<i class="http://www.marriott.com/hotels/travel/wasnw-courtyard-washington-dc-dupont-circle/"></i>
+							</span>
+						</a>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Wedding Coach</h5>
+						<p>If there's enough interest a coach will be travelling from Ayr and Kilmarnock at around 5:30pm for the evening guests.</p>
+						<p>The coach will reverse this route at 1am, dropping off in Kilmarnock and Ayr. Details will be circulated nearer the time.</p>
+						
+					</div>
+				</div>
+				
+				
+				
+			</div>
+		</section>
+		
+		<!-- ========== GETTING THERE END ========== -->
+		
+		<!-- ========== LOCATION START ========== -->
+
+		<section id="location">
+
+
+			<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeIHmnLut7NEjQ_Z1P-jtvG67qrGFgY_g&amp;sensor=false"></script>-->
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeIHmnLut7NEjQ_Z1P-jtvG67qrGFgY_g"></script>		
+			
+			<script type="text/javascript">
+
+				function initialize() {
+
+					// Create an array of styles.
+					var styles = [
+					  {
+					    "stylers": [
+					      { "saturation": -100 },
+					      { "gamma": 1 }
+					    ]
+					  },{
+					    "featureType": "water",
+					    "stylers": [
+					      { "lightness": -12 }
+					    ]
+					  }
+					];
+
+					// Create a new StyledMapType object, passing it the array of styles,
+					// as well as the name to be displayed on the map type control.
+					var styledMap = new google.maps.StyledMapType(styles,
+					{name: "Styled Map"});
+
+
+								var mapOptions = {
+									scrollwheel: false,
+									zoom: 12,
+									center: new google.maps.LatLng(55.8432969,-4.2972064),
+					mapTypeControlOptions: {
+					  mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+					}
+					}
+					var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+					//Associate the styled map with the MapTypeId and set it to display.
+					//map.mapTypes.set('map_style', styledMap);
+					//map.setMapTypeId('map_style');
+
+					setMarkers(map, places);
+				}
+
+				var places = [
+					['Location1', 55.8432969,-4.2972064, 1]
+				//	['Location2', 38.910197, -77.038134, 1],
+				//	['Location3', 41.663938, -83.555212, 1],
+				//	['Location4', 39.465833, -81.108333, 1],
+				//	['Location5', 45.523452, -122.676207, 1]
+				];
+
+				function setMarkers(map, locations) {
+					// Add markers to the map
+					var image = {
+						url: 'images/map-marker.png',
+						// This marker is 40 pixels wide by 42 pixels tall.
+						size: new google.maps.Size(62, 58),
+						// The origin for this image is 0,0.
+						origin: new google.maps.Point(0,0),
+						// The anchor for this image is the base of the pin at 20,42.
+						anchor: new google.maps.Point(20, 58)
+					};
+
+					for (var i = 0; i < locations.length; i++) {
+						var place = locations[i];
+						var myLatLng = new google.maps.LatLng(place[1], place[2]);
+						var marker = new google.maps.Marker({
+							position: myLatLng,
+							map: map,
+							icon: image,
+							title: place[0],
+							zIndex: place[3],
+							animation: google.maps.Animation.DROP
+						});
+
+						var contentString = "Some content";
+						google.maps.event.addListener(marker, "click", function() {
+							infowindow.setContent(this.html);
+							infowindow.open(map, this);
+						});
+					}
+				}
+
+				google.maps.event.addDomListener(window, 'load', initialize);
+			</script>
+
+			<div id="map-canvas"></div>
+			<!-- ========== LOCATION END ========== -->
+
+		<!-- ========== ACOOMMODATION START ========== -->
+
+		<section id="accommodation">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 heading text-center" data-scroll-reveal>
+						<h2>Accommodation</h2>
+						<p><span></span><img src="images/favicon.png" /></i><span></span></p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="row">
+					<div>
+						<p>There may still be some rooms available at the Sherbrooke Castle Hotel where the wedding will take place. These rooms are limited however you might be able to grab one if you're quick!</p>
+						<p>Alternatively, there are a wealth of hotels around Glasgow - a few examples can be found below.</p>
+						<div class="mobile-divider x"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+					</div>
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Sherbrooke Castle</h5>
+						<h6><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h6>
+						<p>11 Sherbrooke Avenue, Pollockshields, Glasgow, G41 4PG</p>
+						<p>0141 427 4227<p>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="http://www.sherbrookecastlehotel.com/accommodation/" class="hover-effect">
+							<img src="images/castlesquare.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="http://www.sherbrookecastlehotel.com/accommodation/"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="https://www.skyscanner.net/hotels/q/?q=Glasgow%2C+Scotland%2C+United+Kingdom&sd=2018-10-20&ed=2018-10-21&na=2&nr=1&bpt_eid=o_27541852" class="hover-effect">
+							<img src="images/skyscanner.jpg" class="img-responsive img-circle" alt=""/>
+							<span class="img-circle">
+								<i class="https://www.skyscanner.net/hotels/q/?q=Glasgow%2C+Scotland%2C+United+Kingdom&sd=2018-10-20&ed=2018-10-21&na=2&nr=1&bpt_eid=o_27541852"></i>
+							</span>
+						</a>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Skyscanner</h5>
+						<h6><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star">						
+						</i></h6>
+						<p>I know this site that does hotels...<p>
+						
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="row">
+					<div>
+						<div class="mobile-divider x"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+					</div>
+					<div class="col-sm-3 text-right" data-scroll-reveal="enter from the left after 0.25s">
+						<h5>Travelodge Glasgow</h5>
+						<h6><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h6>
+						<p>Various options - 'Glasgow Paisley Road' is closest.<p>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
+						<a href="https://www.travelodge.co.uk/search/results?location=Glasgow&lat=&long=&action=search&source=l&checkIn=20%2F10%2F18&checkOut=21%2F10%2F18&rooms%5B0%5D%5Badults%5D=1&rooms%5B0%5D%5Bchildren%5D=0">
+							<img src="images/travelodge.jpg" class="img-responsive img-circle" alt="" />
+							<span class="img-circle">
+								<i class="https://www.travelodge.co.uk/search/results?location=Glasgow&lat=&long=&action=search&source=l&checkIn=20%2F10%2F18&checkOut=21%2F10%2F18&rooms%5B0%5D%5Badults%5D=1&rooms%5B0%5D%5Bchildren%5D=0"></i>
+							</span>
+						</a>
+						<div class="mobile-divider"><span></span><img src="images/favicon.png" /></i><span></span></div>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<a href="http://www.premierinn.com/gb/en/search.html?searchModel.searchTerm=Glasgow&LOCATION=55.86425,-4.25048&ARRdd=20&ARRmm=10&ARRyyyy=2018&NIGHTS=1&ROOMS=1&ADULT1=1&CHILD1=0&COT1=0&INTTYP1=DB&SID=4" class="hover-effect">
+							<img src="images/PremierInn.jpg" class="img-responsive img-circle" alt=""/>
+							<span class="img-circle">
+								<i class="http://www.premierinn.com/gb/en/search.html?searchModel.searchTerm=Glasgow&LOCATION=55.86425,-4.25048&ARRdd=20&ARRmm=10&ARRyyyy=2018&NIGHTS=1&ROOMS=1&ADULT1=1&CHILD1=0&COT1=0&INTTYP1=DB&SID=4"></i>
+							</span>
+						</a>
+					</div>
+
+					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
+						<h5>Premier Inn</h5>
+						<h6><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star">
+						</i></h6>
+						<p>Various options - 'Glasgow Pacific Quay SECC' is closest.</p>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== ACCOMMODATION END ========== -->
+
+ <!-- ========== RSVP START ========== -->
+
+                <section id="rsvp2">
+                 <div class="container text-center">
+                                <div class="row">
+                                        <div class="col-sm-12 heading" data-scroll-reveal>
+                                                <h2>RSVP</h2>
+                                                <p><span></span><img src="images/favicon.png" /></i><span></span></p>
+                                        </div>
+                                </div>
+                                <div class="row">
+                        		<div id="rsvp22"> 
+						<div class="content">
+							<div id="codeEntry">
+							<p>Enter the code from your invitation</p>
+							<p>to complete your RSVP online:</p>
+							<input type="text" name="code">
+							<button id="submitCode" type="button" onclick="checkCodeAndGetInvite()">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+                </div>
+
+                </section>
+				
+				             <section id="rsvp3">
+                 <div class="container text-center">
+                                
+                                <div class="row">
+         <!--               		<div id="rsvp33"> 
+						<div class="content">
+							
+						</div>
+					</div>   -->
+				</div>
+                </div>
+
+                </section>
+
+                        <!-- ========== RSVP END ========== -->
+
+
+		<!-- ========== GALLERY START ========== -->
+
+		<section id="gallery" style="background: #f5f4ec;">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>Gallery</h2>
+						<p><span></span><img src="images/favicon.png" /></i><span></span></p>
+					</div>
+				</div>
+				<p>Once we have some photos we'll put them up here so you can view them. Obviously we'll have to wait to get married first!</p>
+				<!--
+				<div class="row" data-scroll-reveal>
+					<ul class="gallery"> 
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal1.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal1.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal2.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal2.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal3.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal3.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal4.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/gal4.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal5.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal5.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal6.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal6.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal7.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal7.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal11.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal11.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal12.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal12.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal13.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal13.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal14.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal14.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+						<li class="col-xs-4 col-sm-3 col-md-2">
+							<a href="images/gal16.jpg" class="fancybox hover-effect" data-fancybox-group="group">
+								<img src="images/mgal16.jpg" class="img-rounded img-responsive" alt="" />
+								<span class="img-rounded">
+									<i class="fa fa-search fa-3x"></i>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				-->
+			</div>
+		</section>
+
+		<!-- ========== GALLERY END ========== -->
+
+		
+
+
+
+
+		<!-- ========== REGISTRY START ========== -->
+<!--
+		<section id="registry" style="background: #f5f4ec;">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12" data-scroll-reveal>
+						<p>We are registered at</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 owl-carousel" data-scroll-reveal>
+						<div class="item">
+							<a href="http://www.amazon.com"><span></span><img src="images/amazon.jpg" class="img-responsive" alt="" /></a>
+						</div>
+						<div class="item">
+							<a href="http://www.honeyfund.com"><span></span><img src="images/honeyfund.jpg" class="img-responsive" alt="" /></a>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+-->
+		<!-- ========== REGISTRY END ========== -->
+
+
+
+		<!-- ========== PLAYLIST START ========== -->
+		<!--
+		<section id="playlist" style="background: #f5f4ec;">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>The Playlist</h2>
+						<p><span></span><img src="images/favicon.png" /></i><span></span></p>
+					</div>
+				</div>
+
+			<iframe src="https://embed.spotify.com/?uri=spotify:user:justgrimes:playlist:1MNn1WSQ0mFtUHFVchy4kw" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+			</div>
+		</section>
+		-->
+		<!-- ========== PLAYLIST END ========== -->
+
+		<!-- ========== FOOTER START ========== -->
+<!--
+		<footer>
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-sm-12" data-scroll-reveal>
+						&copy; 2014 Perfect Couple - Premium Site Theme by <a href="http://themeforest.net/user/Coffeecream/portfolio" target="_blank">Coffeecream Themes</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+-->
+		<!-- ========== FOOTER END ========== -->
+
+		<!-- Modernizr Plugin -->
+		<script src="js/modernizr.custom.97074.js"></script>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery-1.10.2.min.js"></script>
+
+		<!-- Bootstrap Plugins -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Retina Plugin -->
+		<script src="js/retina-1.1.0.min.js"></script>
+
+		<!-- Superslides Plugin -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.animate-enhanced.min.js"></script>
+		<script src="js/jquery.superslides.js"></script>
+
+		<!-- Countdown Plugin -->
+		<script src="js/jquery.plugin.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+
+		<!-- Scrolly Plugin -->
+		<script src="js/jquery.scrolly.js"></script>
+
+		<!-- CountTo Plugin -->
+		<script src="js/jquery.countTo.js"></script>
+
+		<!-- Owl Carousel Plugin -->
+		<script src="js/owl.carousel.js"></script>
+
+		<!-- Fancybox Plugin -->
+		<script src="js/jquery.fancybox.js"></script>
+
+		<!-- Scroll Reveal Plugin -->
+		<script src="js/scrollReveal.js"></script>
+
+		<!-- jQuery Settings -->
+		<script src="js/settings.js"></script>
+
+		<!-- PrettyPhoto Settings -->
+		<script src="js/jquery.prettyPhoto.js"></script>
+
+		<script type="text/javascript" charset="utf-8">
+		  $(document).ready(function(){
+		    $("a[rel^='prettyPhoto']").prettyPhoto();
+		  });
+		</script>
+	</body>
+</html>
