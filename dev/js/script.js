@@ -283,6 +283,7 @@ function whichForm(numParty, allDay, hasKids) {
                 '</form>' +
                 '</div>';
         }
+        }
     } else {
         dayguest = false;
         if (numParty == 1) {
